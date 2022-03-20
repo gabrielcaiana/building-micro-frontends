@@ -5,7 +5,8 @@
   "main": "index.js",
   "author": "Gabriel Caiana",
   "scripts": {
-    "01_pages_links": "concurrently --names \"decide ,inspire\" \"mfserve --listen 3001 01_pages_links/team-decide\" \"mfserve --listen 3002 01_pages_links/team-inspire\" \"wait-on http://localhost:3001/product/porsche && opener http://localhost:3001/product/porsche\""
+    "01_pages_links": "concurrently --names \"decide ,inspire\" \"mfserve --listen 3001 01_pages_links/team-decide\" \"mfserve --listen 3002 01_pages_links/team-inspire\" \"wait-on http://localhost:3001/product/porsche && opener http://localhost:3001/product/porsche\"",
+    "02_iframe": "concurrently --names \"decide ,inspire\" \"mfserve --listen 3001 02_iframe/team-decide\" \"mfserve --listen 3002 02_iframe/team-inspire\" \"wait-on http://localhost:3001/product/porsche && opener http://localhost:3001/product/porsche\""
   },
   "keywords": [],
   "license": "ISC",
