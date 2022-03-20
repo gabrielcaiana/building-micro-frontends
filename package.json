@@ -5,8 +5,14 @@
   "main": "index.js",
   "author": "Gabriel Caiana",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "01_pages_links": "concurrently --names \"decide ,inspire\" \"mfserve --listen 3001 01_pages_links/team-decide\" \"mfserve --listen 3002 01_pages_links/team-inspire\" \"wait-on http://localhost:3001/product/porsche && opener http://localhost:3001/product/porsche\""
   },
   "keywords": [],
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@microfrontends/serve": "^11.3.0",
+    "concurrently": "^7.0.0",
+    "opener": "^1.5.2",
+    "wait-on": "^6.0.1"
+  }
 }
